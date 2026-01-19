@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404WEAR | Urban Fashion Categories</title>
+    <link rel="stylesheet" href="styles/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👕</text></svg>">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <span class="free-shipping">FREE SHIPPING WORLDWIDE</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <h1 class="logo">404WEAR</h1>
+                <p class="logo-subtitle">Urban Fashion Collection</p>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-link active"><i class="fas fa-store"></i> Shop</a>
+                <a href="#" class="nav-link"><i class="fas fa-tag"></i> Sale</a>
+                <a href="#" class="nav-link"><i class="fas fa-headset"></i> Customer Care</a>
+                <a href="#" class="nav-link"><i class="fas fa-map-marker-alt"></i> Stores</a>
+            </nav>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="#" class="user-icon" title="My Account">
+                    <i class="far fa-user"></i>
+                </a>
+                <a href="#" class="cart-icon" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <span class="breadcrumb-item">Home</span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item active">All Products</span>
+        </div>
+    </div>
+
+    <!-- Category Navigation -->
+    <section class="category-section">
+        <div class="container">
+            <h2 class="section-title">SHOP BY CATEGORY</h2>
+            <p class="section-subtitle">Browse our curated collection of urban fashion essentials</p>
+            
+            <!-- Main Categories -->
+            <div class="main-categories-grid">
+                <button class="category-card active" data-category="all" id="categoryAll">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="category-name">All Products</h3>
+                    <p class="category-count" id="allCount">15</p>
+                </button>
+
+                <button class="category-card" data-category="accessories" id="categoryAccessories">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="category-name">Accessories</h3>
+                    <p class="category-count" id="accessoriesCount">3</p>
+                </button>
+
+                <button class="category-card" data-category="tops" id="categoryTops">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="category-name">Tops</h3>
+                    <p class="category-count" id="topsCount">4</p>
+                </button>
+
+                <button class="category-card" data-category="shoes" id="categoryShoes">
+                    <div class="category-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <h3 class="category-name">Shoes</h3>
+                    <p class="category-count" id="shoesCount">2</p>
+                </button>
+
+                <button class="category-card" data-category="bottoms" id="categoryBottoms">
+                    <div class="category-icon">
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <h3 class="category-name">Bottoms</h3>
+                    <p class="category-count" id="bottomsCount">3</p>
+                </button>
+
+                <button class="category-card" data-category="facial" id="categoryFacial">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="category-name">Facial Care</h3>
+                    <p class="category-count" id="facialCount">3</p>
+                </button>
+            </div>
+
+            <!-- Sub-categories -->
+            <div class="sub-categories-container" id="subCategoriesContainer">
+                <!-- Sub-categories will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main class="products-section">
+        <div class="container">
+            <!-- Products Header -->
+            <div class="products-header">
+                <div class="products-title-section">
+                    <h2 class="products-main-title">ALL PRODUCTS</h2>
+                    <p class="products-description">
+                        Discover our curated collection of urban fashion. From accessories to apparel, 
+                        find everything you need to express your unique style.
+                    </p>
+                </div>
+
+                <div class="products-controls">
+                    <div class="filter-info">
+                        <span class="products-count" id="productsCount">15 products</span>
+                        <button class="clear-filters-btn" id="clearFiltersBtn">
+                            <i class="fas fa-times"></i> Clear Filters
+                        </button>
+                    </div>
+                    
+                    <div class="sort-container">
+                        <label for="sortSelect" class="sort-label">Sort by:</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="featured">Recommended</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+                <div class="loading-state">
+                    <i class="fas fa-spinner fa-spin fa-3x"></i>
+                    <p>Loading 404WEAR products...</p>
+                </div>
+            </div>
+
+            <!-- No Products Message -->
+            <div class="no-products-message" id="noProductsMessage" style="display: none;">
+                <i class="fas fa-search fa-3x"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters or search for something else</p>
+                <button class="btn-primary" id="resetFiltersBtn">Reset All Filters</button>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="price-filter">
+                <h4>Price Range</h4>
+                <div class="price-range-container">
+                    <input type="range" min="0" max="250" value="0" class="price-slider" id="priceMin">
+                    <input type="range" min="0" max="250" value="250" class="price-slider" id="priceMax">
+                    <div class="price-values">
+                        <span id="priceMinValue">RM 0</span>
+                        <span>-</span>
+                        <span id="priceMaxValue">RM 250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add to Cart Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationMessage"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>404WEAR</h3>
+                    <p>Urban Fashion Redefined</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 404WEAR. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/category.js"></script>
+</body>
+</html>
